@@ -220,8 +220,11 @@ body {
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
-  font-size: 12px;
-  color: #666;
+  font-size: 13px;
+  color: #777;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* SOCIAL */
@@ -300,4 +303,35 @@ body {
 #overlay.active {
   opacity: 1;
   visibility: visible;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 18px;
+  color: #aaa;
+  transition: 0.3s;
+  border: 1px solid #222;
+}
+
+.social-icons a:hover {
+  color: #fff;
+  border-color: #a855f7;
+  box-shadow: 0 0 15px rgba(168,85,247,0.4);
+  transform: translateY(-3px);
+}
+
+.footer-title {
+  display: inline-block;
+  background: linear-gradient(to right, #a855f7, #ec4899);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
