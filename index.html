@@ -7,6 +7,9 @@
 
   <link rel="icon" href="https://i.ibb.co/B511gkjR/favicon.png">
 
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 
@@ -17,45 +20,99 @@
 <body class="text-white font-sans scroll-smooth">
 
   <!-- HEADER -->
-  <header class="flex justify-between items-center px-6 py-3 fixed w-full top-0 bg-black/70 backdrop-blur-md z-50">
-    
-    <img src="https://i.ibb.co/vvMKPZ7S/logo.png" class="h-8 md:h-10 w-auto object-contain">
+<header class="flex justify-between items-center px-4 py-3 fixed w-full top-0 bg-black/80 backdrop-blur-md z-50">
 
-    <nav class="hidden md:flex gap-8 text-sm">
-      <a href="#inicio" class="menu-link">Início</a>
-      <a href="#servicos" class="menu-link">Serviços</a>
-      <a href="#sobre" class="menu-link">Sobre</a>
-      <a href="#contato" class="menu-link">Contato</a>
-    </nav>
+  <!-- LOGO -->
+  <img src="https://i.ibb.co/NnGHjZ8M/header.png" class="h-8 w-auto object-contain">
+
+  <!-- MENU DESKTOP -->
+  <div class="hidden md:flex items-center gap-6 text-base font-semibold">
+
+    <a href="#inicio" class="menu-link">Início</a>
+    <a href="#servicos" class="menu-link">Serviços</a>
+    <a href="#contato" class="menu-link">Orçamento</a>
+    <a href="#faq" class="menu-link">FAQ</a>
 
     <a href="https://wa.me/5511987293823"
-       class="hidden md:block bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-2 rounded-full hover:scale-105 transition">
+       class="bg-gradient-to-r from-purple-500 to-pink-500 px-5 py-2 rounded-full hover:scale-105 transition">
       Agendar
     </a>
 
-  </header>
+  </div>
 
-  <!-- HERO -->
+  <!-- BOTÃO HAMBURGER -->
+  <div class="md:hidden">
+    <button id="menuBtn" class="text-2xl">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+</header>
+
+<!-- MENU MOBILE -->
+<div id="mobileMenu" class="mobile-menu">
+
+  <a href="#inicio">Início</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#contato">Orçamento</a>
+  <a href="#faq">FAQ</a>
+
+  <a href="https://wa.me/5511987293823" class="mobile-cta">
+    Agendar
+  </a>
+
+</div>
+
+<div id="overlay"></div>
+
+  <!-- HERO (NÃO MEXER) -->
   <section id="inicio" class="relative text-center px-6 py-32 mt-16 overflow-hidden">
-
     <div id="particles-js"></div>
 
     <div class="relative z-10">
-      <h1 class="text-3xl md:text-6xl font-bold glow-text">
-        Soluções digitais para 
-        <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
-          negócios locais
-        </span>
-      </h1>
+     <h1 class="text-3xl md:text-6xl font-bold glow-text">
+  Seu negócio está perdendo clientes por não ter presença digital?
+  <span class="bg-gradient-to-r from-purple-500 to-pink-500 text-transparent bg-clip-text">
+    Nós resolvemos isso.
+  </span>
+</h1>
 
-      <p class="mt-6 text-gray-400 max-w-xl mx-auto">
-        Ajudamos empresas a crescer com redes sociais, criação de sites, automação e sistemas.
-      </p>
+<p class="mt-6 text-gray-400 max-w-xl mx-auto">
+  Criamos sites, sistemas e estratégias que fazem empresas locais crescerem, venderem mais e se destacarem na internet.
+</p>
 
       <a href="https://wa.me/5511987293823"
          class="inline-block mt-8 bg-gradient-to-r from-purple-500 to-pink-500 px-8 py-3 rounded-full font-semibold hover:scale-105 transition">
-        Falar no WhatsApp
+        Quero mais clientes
       </a>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section id="servicos" class="px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+    <div class="service-card">
+      <i class="fa-solid fa-hashtag service-icon"></i>
+      <h3>Social Media</h3>
+      <p>Gestão estratégica para atrair mais clientes e crescer nas redes.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-globe service-icon"></i>
+      <h3>Criação de Sites</h3>
+      <p>Sites modernos, rápidos e focados em conversão.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-solid fa-robot service-icon"></i>
+      <h3>Automação</h3>
+      <p>Automatize processos e ganhe tempo no seu negócio.</p>
+    </div>
+
+    <div class="service-card">
+      <i class="fa-brands fa-windows service-icon"></i>
+      <h3>Sistemas</h3>
+      <p>Soluções personalizadas para sua empresa crescer.</p>
     </div>
 
   </section>
@@ -68,35 +125,252 @@
     </h2>
 
     <div class="relative overflow-hidden">
-
       <div class="fade-left"></div>
       <div class="fade-right"></div>
 
       <div class="carousel-track">
 
-  <!-- LOGOS CORRIGIDAS -->
-  <img src="https://i.ibb.co/R4gQQzr3/1.png" class="logo-item">
-  <img src="https://i.ibb.co/yn9x0yxM/2.png" class="logo-item">
-  <img src="https://i.ibb.co/CKLt909g/3.png" class="logo-item">
-  <img src="https://i.ibb.co/j9v7G2KP/4.png" class="logo-item">
-  <img src="https://i.ibb.co/Dfc73M1s/5.png" class="logo-item">
-  <img src="https://i.ibb.co/PZFrm8mC/6.png" class="logo-item">
-  <img src="https://i.ibb.co/TxScpmKb/7.png" class="logo-item">
+        <img src="https://i.ibb.co/R4gQQzr3/1.png" class="logo-item">
+        <img src="https://i.ibb.co/yn9x0yxM/2.png" class="logo-item">
+        <img src="https://i.ibb.co/CKLt909g/3.png" class="logo-item">
+        <img src="https://i.ibb.co/j9v7G2KP/4.png" class="logo-item">
+        <img src="https://i.ibb.co/Dfc73M1s/5.png" class="logo-item">
+        <img src="https://i.ibb.co/PZFrm8mC/6.png" class="logo-item">
+        <img src="https://i.ibb.co/TxScpmKb/7.png" class="logo-item">
 
-  <!-- DUPLICADO PRA LOOP -->
-  <img src="https://i.ibb.co/R4gQQzr3/1.png" class="logo-item">
-  <img src="https://i.ibb.co/yn9x0yxM/2.png" class="logo-item">
-  <img src="https://i.ibb.co/CKLt909g/3.png" class="logo-item">
-  <img src="https://i.ibb.co/j9v7G2KP/4.png" class="logo-item">
-  <img src="https://i.ibb.co/Dfc73M1s/5.png" class="logo-item">
-  <img src="https://i.ibb.co/PZFrm8mC/6.png" class="logo-item">
-  <img src="https://i.ibb.co/TxScpmKb/7.png" class="logo-item">
+        <!-- LOOP -->
+        <img src="https://i.ibb.co/R4gQQzr3/1.png" class="logo-item">
+        <img src="https://i.ibb.co/yn9x0yxM/2.png" class="logo-item">
+        <img src="https://i.ibb.co/CKLt909g/3.png" class="logo-item">
+        <img src="https://i.ibb.co/j9v7G2KP/4.png" class="logo-item">
+        <img src="https://i.ibb.co/Dfc73M1s/5.png" class="logo-item">
+        <img src="https://i.ibb.co/PZFrm8mC/6.png" class="logo-item">
+        <img src="https://i.ibb.co/TxScpmKb/7.png" class="logo-item">
 
-</div>
+      </div>
+    </div>
+  </section>
 
+  <!-- TEXTO + FORM LADO A LADO -->
+  <section id="contato" class="py-20 px-6 max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- TEXTO -->
+    <div>
+      <div class="service-tag inline-block px-4 py-2 rounded-full text-sm font-semibold mb-6">
+        Fale com a gente
+      </div>
+
+      <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+        Vamos levar seu negócio para o próximo nível
+      </h2>
+
+      <p class="mt-6 text-gray-400">
+        Conte pra gente o que você precisa e vamos criar a melhor solução para o seu negócio crescer.
+      </p>
+    </div>
+
+    <!-- FORM BOX -->
+    <div class="form-box">
+      <form id="leadForm" class="grid gap-4">
+
+        <input type="text" id="nome" placeholder="Seu nome" class="form-input" required>
+        <input type="text" id="empresa" placeholder="Nome da empresa" class="form-input">
+
+        <select id="servico" class="form-input">
+          <option value="">Qual serviço você precisa?</option>
+          <option>Social Media</option>
+          <option>Criação de Sites</option>
+          <option>Automação</option>
+          <option>Sistemas</option>
+        </select>
+
+        <textarea id="mensagem" rows="4" placeholder="Descreva o que você precisa" class="form-input"></textarea>
+
+        <button type="submit"
+          class="bg-gradient-to-r from-purple-500 to-pink-500 py-3 rounded-full font-semibold hover:scale-105 transition">
+          Enviar
+        </button>
+
+      </form>
     </div>
 
   </section>
+
+  <section class="py-20 px-6 text-center fade-in">
+
+  <h2 class="text-3xl md:text-5xl font-bold mb-10">
+    O que nossos clientes dizem
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+    <div class="testimonial-card">
+      <p>"A Anup teve um papel muito importante no crescimento da Copa IDE.
+
+Antes, a gente não tinha muita estratégia no Instagram, e eles simplesmente transformaram nossa presença digital. Cuidaram do nosso perfil por bastante tempo, organizaram tudo e trouxeram uma identidade muito mais profissional pro projeto.
+
+Um dos maiores diferenciais foi a parte das transmissões ao vivo dos jogos. Eles não só faziam as lives pra gente, como também ensinaram todo o processo, o que ajudou muito a gente ganhar autonomia.
+
+Hoje a Copa IDE tem muito mais visibilidade, engajamento e organização graças ao trabalho deles.
+
+Só tenho a agradecer e recomendo demais a Anup pra quem quer crescer de verdade nas redes sociais.
+"</p>
+      <span>— Flávio Santos - CEO Copa Ide</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"A Anup fez total diferença pra Adrik Caça Vazamentos.
+
+A gente precisava de um site profissional, que realmente passasse confiança e ajudasse a gerar clientes — e eles entregaram exatamente isso. Desenvolveram um site rápido, bem estruturado e pensado pra conversão.
+
+O melhor é que até hoje o site roda perfeitamente, sem dor de cabeça, mostrando a qualidade do trabalho que foi feito desde o início.
+
+Sem contar o suporte, que sempre foi ágil e prestativo quando precisamos.
+
+Recomendo a Anup de olhos fechados pra qualquer empresa que quer ter presença forte na internet e um site que realmente funcione.
+."</p>
+      <span>— Adriano - CEO Adrik Caça Vazamentos</span>
+    </div>
+
+    <div class="testimonial-card">
+      <p>"Trabalhar com a Anup foi um divisor de águas pro nosso negócio.
+
+Antes, a gente tinha muita dificuldade pra organizar pedidos, controlar vendas e integrar tudo. Depois que eles desenvolveram nosso PDV integrado com o cardápio online, tudo ficou muito mais rápido, prático e profissional.
+
+O sistema de delivery, estilo iFood, então… foi surreal. Hoje conseguimos receber pedidos direto, sem depender de terceiros, aumentando nosso lucro e tendo muito mais controle sobre tudo.
+
+Além da qualidade do sistema, o suporte deles é diferenciado — sempre rápidos, atenciosos e realmente preocupados com o crescimento do cliente.
+
+Recomendo demais a Anup pra qualquer empresa que quer evoluir de verdade e ter um sistema moderno, funcional e que gera resultado.
+"</p>
+      <span>— Rapha - CEO Açai do Rapha</span>
+    </div>
+
+  </div>
+
+</section>
+
+  <a href="https://wa.me/5511987293823" class="whatsapp-float" target="_blank">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<section id="faq" class="py-20 px-6 max-w-4xl mx-auto">
+
+  <h2 class="text-3xl md:text-5xl font-bold text-center mb-10">
+    Dúvidas frequentes
+  </h2>
+
+  <div class="faq-container">
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Quanto custa os serviços?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Trabalhamos com valores acessíveis e personalizados para cada negócio. Entre em contato para um orçamento.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Em quanto tempo fica pronto?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Depende do serviço, mas geralmente entre 3 a 10 dias úteis.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Vocês atendem qualquer tipo de empresa?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Sim! Nosso foco são pequenos negócios locais, mas atendemos diversos nichos.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Preciso ter conhecimento técnico?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Não! Nós cuidamos de tudo pra você, desde o desenvolvimento até a entrega final.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- MARCA -->
+    <div class="footer-brand">
+      <img src="https://i.ibb.co/NnGHjZ8M/header.png" class="footer-logo">
+      <p>
+        Transformando negócios locais em marcas fortes através da tecnologia e marketing digital.
+      </p>
+    </div>
+
+    <!-- NAVEGAÇÃO -->
+    <div class="footer-links">
+      <h4>Navegação</h4>
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#contato">Orçamento</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <!-- REDES -->
+    <div class="footer-social">
+      <h4>Redes sociais</h4>
+
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FERRAMENTAS -->
+  <div class="tools-section">
+
+    <h4>Ferramentas que utilizamos</h4>
+
+    <div class="tools-grid">
+
+      <!-- DEV -->
+      <span><i class="fa-brands fa-html5"></i> HTML</span>
+      <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
+      <span><i class="fa-brands fa-js"></i> JavaScript</span>
+      <span><i class="fa-brands fa-github"></i> GitHub</span>
+      <span><i class="fa-solid fa-code"></i> VS Code</span>
+      <span><i class="fa-brands fa-wordpress"></i> WordPress</span>
+
+      <!-- SOCIAL -->
+      <span><i class="fa-brands fa-behance"></i> Behance</span>
+      <span><i class="fa-brands fa-pinterest"></i> Pinterest</span>
+      <span><i class="fa-solid fa-image"></i> Photoshop</span>
+      <span><i class="fa-solid fa-pen-nib"></i> Canva</span>
+      <span><i class="fa-solid fa-chart-line"></i> Google Analytics</span>
+
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Anup Solutions — Todos os direitos reservados
+  </div>
+
+</footer>
 
   <!-- SCRIPT -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
